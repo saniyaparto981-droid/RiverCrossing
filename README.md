@@ -88,7 +88,19 @@ The challenge is to transport every entity from the starting bank to the destina
 - May not produce the shortest solution but is often faster for deep searches.
 
 ---
+## 📊 Algorithm Analysis
 
+To better evaluate the behavior of the implemented search algorithms, several experiments were conducted using different constraint settings of the River Crossing problem.
+
+When the original puzzle constraints were applied, both **Breadth-First Search (BFS)** and **Depth-First Search (DFS)** successfully found a valid solution consisting of **18 moves**. Although both algorithms reached a solution with the same number of steps, their search paths began to differ after the fourth move. This demonstrates that different search strategies may explore the state space in different orders while still producing solutions of equal length.
+
+As expected, the BFS algorithm explored significantly more nodes than DFS. This behavior is consistent with the nature of BFS, which expands the search tree level by level before moving deeper. In contrast, DFS follows a single branch as deeply as possible before backtracking, generally requiring less memory and visiting fewer nodes.
+
+To further investigate the results, additional experiments were performed by temporarily relaxing some of the puzzle constraints (specifically the parent-related validity conditions). Under these modified conditions, the algorithms produced different solution paths, confirming that the implementation itself was functioning correctly and that the observed behavior was primarily influenced by the puzzle constraints.
+
+An interesting observation from the original problem is that, despite DFS not guaranteeing an optimal solution in general, it produced a solution with the **same minimum number of moves (18)** as BFS. This can be explained by the highly constrained nature of the River Crossing puzzle, where the number of valid paths is limited. Consequently, the first solution discovered by DFS happened to be one of the optimal solutions found by BFS.
+
+Overall, the experiments demonstrate the expected theoretical behavior of both algorithms while highlighting how problem constraints can significantly influence the search process and the resulting solution paths.
 ## 🏗️ Software Design
 
 The project follows Object-Oriented Design principles by separating responsibilities into independent components.
