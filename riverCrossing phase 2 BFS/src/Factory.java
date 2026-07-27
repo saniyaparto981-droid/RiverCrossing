@@ -19,10 +19,6 @@ public class Factory {
         return new ChildNodeGenerate();
     }
 
-    public static INodePrinter createPrinter(){
-
-        return new NodePrinter();
-    }
 
     public static ISearchAlgorithm createSearcher(){
 
