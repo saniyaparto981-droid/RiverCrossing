@@ -133,9 +133,9 @@ The UML diagram illustrates the relationships between interfaces, classes, and p
 
 ## 👥 Team Members
 
-- Hannane
-- Sania
-- Pouria
+- Hannane Hasanlue
+- Sania  Parto
+- Pouria Imani
 
 ---
 
